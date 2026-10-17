@@ -1,370 +1,1002 @@
-<html lang="zh-CN" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鉴黄师免费下 - 实战指南</title>
-    <meta name="description" content="鉴黄师免费下适合目录站、资源导航与黄页场景，内置结构优化与发布策略，便于在百度等搜索引擎中建立稳定入口。">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
-<style id="v-4bbc9d38">:root{--v-seed:4bbc9d38;--v-theme:emerald;}</style><meta name="x-variant" content="4bbc9d38"><!-- page p03 theme emerald -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO目录站群管理系统 - 实战指南</title>
+<meta name="description" content="《安全套测试员》漫画是治愈番在线看专区,收录海量国漫、日漫、条漫,主打治愈番与日常番。每日更新新番新作,支持手机追番、全集在线、高清不卡,经典老番也能随时重温,随时随地免费看漫画。">
+<meta name="keywords" content="《安全套测试员》漫画,治愈番,国漫,日漫,条漫,在线看,看漫,日常番,免费追番,新番同步,经典老番,漫画排行">
+<meta name="author" content="《安全套测试员》漫画">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "《安全套测试员》漫画",
+  "description": "《安全套测试员》漫画 —— 治愈番与日常番在线看专区，海量国漫日漫条漫每日更新。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "在《安全套测试员》漫画追治愈番，更新频率怎么样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "《安全套测试员》漫画的治愈番专辑基本每日更新，热门新番同步上线，经典老番则会不定期补全全集。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《安全套测试员》漫画手机追番体验如何？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "手机端做了自适应排版，条漫竖屏滚动顺滑，支持断点续看，看漫不卡顿。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《安全套测试员》漫画上的国漫日漫都能免费看吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "站内大部分国漫与日漫都支持免费在线看，部分全集完结作品也保持免费开放。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --rfc-primary:#b5733a;
+  --rfc-accent:#e0a262;
+  --rfc-bg:#f6e7d3;
+  --rfc-bg-deep:#e9d2b6;
+  --rfc-card:#fdf8f0;
+  --rfc-text:#412a17;
+  --rfc-text-soft:#7a5a3c;
+  --rfc-line:#d8bb95;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+  background:var(--rfc-bg);
+  color:var(--rfc-text);
+  line-height:1.7;
+  overflow-x:hidden;
+  position:relative;
+}
+/* ===== 背景动画层 ===== */
+.bg_layer{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.ripple_wrap,.blob_wrap{position:absolute;inset:0;}
+.ripple{
+  position:absolute;
+  border:2px solid rgba(181,115,58,0.28);
+  border-radius:50%;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%) scale(0.1);
+  opacity:0;
+  animation:ripple_go 7s ease-out infinite;
+}
+@keyframes ripple_go{
+  0%{transform:translate(-50%,-50%) scale(0.1);opacity:0.55;}
+  80%{opacity:0.08;}
+  100%{transform:translate(-50%,-50%) scale(6);opacity:0;}
+}
+.blob{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(60px);
+  opacity:0.5;
+}
+.blob_1{
+  width:340px;height:340px;
+  background:radial-gradient(circle,#f7c98a,rgba(247,201,138,0));
+  left:-6%;top:12%;
+  animation:blob_move_1 22s ease-in-out infinite alternate;
+}
+.blob_2{
+  width:280px;height:280px;
+  background:radial-gradient(circle,#e8b478,rgba(232,180,120,0));
+  right:-4%;top:48%;
+  animation:blob_move_2 26s ease-in-out infinite alternate;
+}
+.blob_3{
+  width:300px;height:300px;
+  background:radial-gradient(circle,#f3d9b0,rgba(243,217,176,0));
+  left:38%;bottom:-6%;
+  animation:blob_move_3 30s ease-in-out infinite alternate;
+}
+@keyframes blob_move_1{
+  0%{transform:translate(0,0) scale(1);}
+  50%{transform:translate(60px,80px) scale(1.18);}
+  100%{transform:translate(20px,160px) scale(0.95);}
+}
+@keyframes blob_move_2{
+  0%{transform:translate(0,0) scale(1.05);}
+  50%{transform:translate(-70px,-60px) scale(0.9);}
+  100%{transform:translate(-30px,70px) scale(1.15);}
+}
+@keyframes blob_move_3{
+  0%{transform:translate(0,0) scale(0.95);}
+  50%{transform:translate(-80px,-40px) scale(1.15);}
+  100%{transform:translate(50px,-90px) scale(1);}
+}
+.page_wrap{
+  position:relative;
+  z-index:2;
+}
+/* ===== 导航 ===== */
+.nav_bar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 5vw;
+  background:rgba(246,231,211,0.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rfc-line);
+}
+.nav_logo{
+  font-size:18px;
+  font-weight:800;
+  color:var(--rfc-primary);
+  letter-spacing:0.5px;
+}
+.nav_cta_btn{
+  display:inline-block;
+  padding:9px 22px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--rfc-primary),var(--rfc-accent));
+  color:#fffaf2;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 6px 16px rgba(181,115,58,0.28);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.nav_cta_btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(181,115,58,0.36);}
+/* ===== Hero ===== */
+.hero_sec{
+  position:relative;
+  text-align:center;
+  padding:92px 5vw 78px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.hero_mark{
+  font-size:118px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:10px;
+  color:rgba(181,115,58,0.16);
+  margin-bottom:-58px;
+  user-select:none;
+}
+.hero_title{
+  font-size:clamp(28px,5vw,50px);
+  font-weight:900;
+  color:var(--rfc-text);
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+.hero_title span{color:var(--rfc-primary);}
+.hero_sub{
+  font-size:clamp(14px,2vw,17px);
+  color:var(--rfc-text-soft);
+  max-width:640px;
+  margin:0 auto 30px;
+}
+.hero_btn{
+  display:inline-block;
+  padding:15px 44px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--rfc-primary),var(--rfc-accent));
+  color:#fffaf2;
+  font-size:16px;
+  font-weight:800;
+  text-decoration:none;
+  letter-spacing:1px;
+  box-shadow:0 10px 26px rgba(181,115,58,0.34);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.hero_btn:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(181,115,58,0.42);}
+/* ===== 通用区块 ===== */
+.sec_block{
+  padding:70px 5vw;
+  max-width:1180px;
+  margin:0 auto;
+}
+.sec_head{
+  text-align:center;
+  margin-bottom:44px;
+}
+.sec_head h2{
+  font-size:clamp(22px,3.2vw,32px);
+  font-weight:900;
+  color:var(--rfc-text);
+  letter-spacing:1px;
+}
+.sec_head h2::after{
+  content:"";
+  display:block;
+  width:56px;
+  height:4px;
+  border-radius:4px;
+  margin:14px auto 0;
+  background:linear-gradient(90deg,var(--rfc-primary),var(--rfc-accent));
+}
+.sec_head p{
+  margin-top:14px;
+  font-size:14px;
+  color:var(--rfc-text-soft);
+}
+.sec_head .mark_line{
+  display:block;
+  width:120px;
+  height:1px;
+  margin:16px auto 0;
+  background:linear-gradient(90deg,rgba(181,115,58,0),var(--rfc-line),rgba(181,115,58,0));
+}
+/* ===== 治愈番列表 ===== */
+.cure_grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:24px;
+}
+.cure_card{
+  background:var(--rfc-card);
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--rfc-line);
+  box-shadow:0 8px 22px rgba(181,115,58,0.12);
+  transition:transform .3s ease,box-shadow .3s ease;
+  display:flex;
+  flex-direction:column;
+}
+.cure_card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(181,115,58,0.22);}
+.cure_card img{width:100%;height:158px;object-fit:cover;display:block;}
+.cure_body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.cure_body h3{font-size:16px;font-weight:800;color:var(--rfc-text);}
+.cure_author{font-size:12.5px;color:var(--rfc-text-soft);}
+.cure_desc{font-size:13px;color:var(--rfc-text-soft);flex:1;}
+.cure_meta{display:flex;align-items:center;justify-content:space-between;margin-top:4px;}
+.cure_index{
+  font-size:12.5px;
+  font-weight:700;
+  color:#fffaf2;
+  background:linear-gradient(135deg,var(--rfc-primary),var(--rfc-accent));
+  padding:3px 12px;
+  border-radius:999px;
+}
+.cure_tag{
+  font-size:12px;
+  color:var(--rfc-primary);
+  border:1px solid var(--rfc-line);
+  padding:3px 10px;
+  border-radius:999px;
+}
+/* ===== 治愈类型 ===== */
+.genre_wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:20px;
+}
+.genre_card{
+  background:linear-gradient(160deg,var(--rfc-card),var(--rfc-bg-deep));
+  border:1px solid var(--rfc-line);
+  border-radius:16px;
+  padding:22px 20px;
+  text-align:center;
+  transition:transform .3s ease;
+}
+.genre_card:hover{transform:scale(1.04);}
+.genre_icon{
+  width:54px;height:54px;
+  margin:0 auto 14px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  background:linear-gradient(135deg,var(--rfc-primary),var(--rfc-accent));
+  color:#fffaf2;
+  font-weight:800;
+}
+.genre_card h3{font-size:16px;font-weight:800;margin-bottom:8px;}
+.genre_card p{font-size:13px;color:var(--rfc-text-soft);}
+/* ===== 日常推荐 ===== */
+.daily_grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:22px;
+}
+.daily_card{
+  display:flex;
+  gap:14px;
+  background:var(--rfc-card);
+  border:1px solid var(--rfc-line);
+  border-radius:16px;
+  padding:14px;
+  text-align:left;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.daily_card:hover{transform:translateX(6px);box-shadow:0 12px 26px rgba(181,115,58,0.18);}
+.daily_card img{
+  width:92px;height:92px;
+  border-radius:12px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.daily_info{display:flex;flex-direction:column;justify-content:center;gap:5px;}
+.daily_info h3{font-size:15px;font-weight:800;}
+.daily_info span{font-size:12px;color:var(--rfc-primary);font-weight:700;}
+.daily_info p{font-size:12.5px;color:var(--rfc-text-soft);}
+/* ===== 治愈排行 ===== */
+.rank_list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  max-width:860px;
+  margin:0 auto;
+}
+.rank_item{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  background:var(--rfc-card);
+  border:1px solid var(--rfc-line);
+  border-radius:14px;
+  padding:14px 18px;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.rank_item:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(181,115,58,0.18);}
+.rank_no{
+  width:38px;height:38px;
+  flex-shrink:0;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:16px;
+  color:#fffaf2;
+  background:linear-gradient(135deg,var(--rfc-primary),var(--rfc-accent));
+}
+.rank_item img{
+  width:64px;height:64px;
+  border-radius:10px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.rank_info{flex:1;min-width:0;}
+.rank_info h3{font-size:15px;font-weight:800;}
+.rank_info p{font-size:12.5px;color:var(--rfc-text-soft);}
+.rank_score{
+  font-size:15px;
+  font-weight:900;
+  color:var(--rfc-primary);
+  flex-shrink:0;
+}
+/* ===== 同理推荐 ===== */
+.similar_wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:20px;
+}
+.similar_card{
+  background:var(--rfc-card);
+  border:1px solid var(--rfc-line);
+  border-radius:16px;
+  overflow:hidden;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.similar_card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(181,115,58,0.2);}
+.similar_card img{width:100%;height:132px;object-fit:cover;display:block;}
+.similar_card h3{font-size:14.5px;font-weight:800;padding:12px 14px 4px;}
+.similar_card p{font-size:12.5px;color:var(--rfc-text-soft);padding:0 14px 14px;}
+/* ===== CTA ===== */
+.cta_sec{
+  text-align:center;
+  padding:80px 5vw 90px;
+}
+.cta_box{
+  max-width:720px;
+  margin:0 auto;
+  background:linear-gradient(160deg,var(--rfc-card),var(--rfc-bg-deep));
+  border:1px solid var(--rfc-line);
+  border-radius:24px;
+  padding:52px 32px;
+  box-shadow:0 18px 44px rgba(181,115,58,0.18);
+}
+.cta_box h2{font-size:clamp(22px,3.4vw,34px);font-weight:900;margin-bottom:16px;}
+.cta_box p{font-size:14.5px;color:var(--rfc-text-soft);margin-bottom:28px;}
+.cta_btn{
+  display:inline-block;
+  padding:16px 52px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--rfc-primary),var(--rfc-accent));
+  color:#fffaf2;
+  font-size:16px;
+  font-weight:800;
+  text-decoration:none;
+  letter-spacing:1px;
+  box-shadow:0 12px 28px rgba(181,115,58,0.34);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.cta_btn:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(181,115,58,0.42);}
+/* ===== 页脚 ===== */
+.footer_sec{
+  background:#3a2413;
+  color:#f0dcc2;
+  padding:56px 5vw 28px;
+  position:relative;
+  z-index:2;
+}
+.footer_top{
+  display:flex;
+  flex-wrap:wrap;
+  gap:32px;
+  justify-content:space-between;
+  max-width:1180px;
+  margin:0 auto 32px;
+  padding-bottom:28px;
+  border-bottom:1px solid rgba(240,220,194,0.2);
+}
+.footer_brand{max-width:420px;}
+.footer_brand h3{font-size:17px;font-weight:900;color:#f7c98a;margin-bottom:10px;}
+.footer_brand p{font-size:13px;color:#d3b795;line-height:1.8;}
+.footer_nav{min-width:160px;}
+.footer_nav h4{font-size:14px;font-weight:800;color:#f7c98a;margin-bottom:12px;}
+.footer_nav a{
+  display:block;
+  font-size:13px;
+  color:#d3b795;
+  text-decoration:none;
+  margin-bottom:8px;
+  transition:color .25s ease;
+}
+.footer_nav a:hover{color:#f7c98a;}
+.footer_disclaim{
+  max-width:1180px;
+  margin:0 auto 22px;
+  font-size:12.5px;
+  color:#b99a78;
+  line-height:1.9;
+  text-align:center;
+}
+.footer_bottom{
+  max-width:1180px;
+  margin:0 auto;
+  padding-top:20px;
+  border-top:1px solid rgba(240,220,194,0.2);
+  text-align:center;
+  font-size:12.5px;
+  color:#b99a78;
+}
+.footer_bottom span{display:block;margin-top:6px;}
+@media(max-width:640px){
+  .hero_mark{font-size:76px;margin-bottom:-38px;}
+  .nav_logo{font-size:15px;}
+  .rank_item{flex-wrap:wrap;}
+}
+
+    .auto-reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .auto-reveal.auto-visible{opacity:1;transform:translateY(0)}
+    </style>
+<!-- page p03 theme emerald ai=1 -->
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased antialiased selection:bg-emerald-200 selection:text-emerald-900" data-variant="4bbc9d38">
+<body>
 
-    <!-- 顶部导航 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-2">
-                    <span class="text-emerald-600 text-2xl"><i class="fas fa-sitemap"></i></span>
-                    <span class="font-bold text-gray-900 text-lg">鉴黄师免费下</span>
-                    <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700">专题推荐</span>
-                </div>
-                <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-                    <a href="#review" class="hover:text-emerald-600 transition">评测总览</a>
-                    <a href="#pros-cons" class="hover:text-emerald-600 transition">优缺点</a>
-                    <a href="#features" class="hover:text-emerald-600 transition">功能详解</a>
-                    <a href="#requirements" class="hover:text-emerald-600 transition">系统要求</a>
-                    <a href="#faq" class="hover:text-emerald-600 transition">常见问题</a>
-                </div>
-                <a href="#download" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 transition text-white text-sm font-semibold px-4 py-2 rounded-lg">
-                    <i class="fas fa-download"></i> 查看版本
-                </a>
-            </div>
-        </div>
-    </nav>
+<div class="bg_layer">
+  <div class="ripple_wrap">
+    <div class="ripple" style="animation-delay:0s;"></div>
+    <div class="ripple" style="animation-delay:1.4s;"></div>
+    <div class="ripple" style="animation-delay:2.8s;"></div>
+    <div class="ripple" style="animation-delay:4.2s;"></div>
+    <div class="ripple" style="animation-delay:5.6s;"></div>
+  </div>
+  <div class="blob_wrap">
+    <div class="blob blob_1"></div>
+    <div class="blob blob_2"></div>
+    <div class="blob blob_3"></div>
+  </div>
+</div>
 
-    <!-- Hero 评测头图 -->
-    <section id="review" class="bg-white pb-12 pt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                            <i class="fas fa-star"></i> 编辑推荐
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">
-                            <i class="fas fa-rotate"></i> 2024年最新版
-                        </span>
-                    </div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-                        鉴黄师免费下
-                    </h1>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-4">鉴黄师免费下适合目录站、资源导航与黄页场景，内置结构优化与发布策略，便于在百度等搜索引擎中建立稳定入口。</p>
-                    <p class="text-gray-500 mb-8">同样是泛目录方向，鉴黄师免费下 更偏向可规模化生产。我们实测了 站群矩阵 与 环境检测脚本 相关模块，并整理成可直接套用的流程。</p>
-                    <div class="flex flex-wrap items-center gap-4">
-                        <a href="#download" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 transition text-white text-base font-semibold px-6 py-3 rounded-xl shadow-lg shadow-emerald-200">
-                            <i class="fas fa-download"></i> 查看最新版本
-                        </a>
-                        <a href="#features" class="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 transition text-gray-800 text-base font-semibold px-6 py-3 rounded-xl">
-                            <i class="fas fa-book-open"></i> 功能详解
-                        </a>
-                    </div>
-                    <div class="mt-6 flex items-center gap-5 text-sm text-gray-500">
-                        <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-emerald-600"></i> 免费试用</span>
-                        <span class="flex items-center gap-1.5"><i class="fas fa-shield-halved text-emerald-600"></i> 正版授权</span>
-                        <span class="flex items-center gap-1.5"><i class="fas fa-headset text-emerald-600"></i> 技术支持</span>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="absolute inset-0 bg-emerald-200 rounded-3xl blur-2xl opacity-40"></div>
-                    <div class="relative bg-white p-2 rounded-3xl shadow-2xl border border-gray-100">
-                        <img src="https://picsum.photos/seed/%E9%89%B4%E9%BB%84%E5%B8%88%E5%85%8D%E8%B4%B9%E4%B8%8B-emerald-4bbc9d38/800/450" alt="鉴黄师免费下 官网评测" class="rounded-2xl w-full h-auto object-cover">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="page_wrap">
 
-    <!-- 核心数据快捷栏 -->
-    <section class="bg-white border-b border-gray-200 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="flex items-center gap-3">
-                <i class="fas fa-bolt text-emerald-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">8.7</p>
-                    <p class="text-sm text-gray-500">综合评分</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-cloud-arrow-down text-emerald-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">128K</p>
-                    <p class="text-sm text-gray-500">月度下载</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-gauge-high text-emerald-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">0.4s</p>
-                    <p class="text-sm text-gray-500">平均响应</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-life-ring text-emerald-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">99.8%</p>
-                    <p class="text-sm text-gray-500">稳定率</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- 极简导航 -->
+  <nav class="nav_bar">
+    <div class="nav_logo">《安全套测试员》漫画</div>
+    <a href="#cta" class="nav_cta_btn">开始观看</a>
+  </nav>
 
-    <!-- Pros & Cons 优缺点对比 -->
-    <section id="pros-cons" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-emerald-600 font-semibold text-sm tracking-widest uppercase">Pros & Cons</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">鉴黄师免费下 优缺点全面评测</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- 优点 -->
-                <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-5">
-                        <span class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-lg"><i class="fas fa-thumbs-up"></i></span>
-                        <h3 class="text-xl font-semibold text-gray-900">优点</h3>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">批量能力强</span><p class="text-sm text-gray-500">支持规则化生产栏目与页面，适合长尾词规模化覆盖，减少人工复制粘贴。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">可监控可复盘</span><p class="text-sm text-gray-500">关键指标可追踪，更新动作能对照数据调整，避免盲目堆内容。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">上线速度快</span><p class="text-sm text-gray-500">图形化安装与模板复用降低门槛，鉴黄师免费下可在短时间内完成可访问部署。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">安全稳定</span><p class="text-sm text-gray-500">定期发布安全补丁，防注入、防XSS策略完善，给网站提供可靠的安全保障。</p></div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 缺点 -->
-                <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-5">
-                        <span class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg"><i class="fas fa-thumbs-down"></i></span>
-                        <h3 class="text-xl font-semibold text-gray-900">缺点</h3>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-emerald-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">词库质量影响大</span><p class="text-sm text-gray-500">低质堆砌词会浪费页面权重，上线前应做清洗与分级。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-emerald-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">安全需重视</span><p class="text-sm text-gray-500">后台暴露面较大，应开启二次验证、改默认路径并定期备份。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-emerald-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">设计同质化</span><p class="text-sm text-gray-500">默认模板较多，想做品牌差异需要自定义视觉与栏目文案。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-emerald-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">官方支持时差</span><p class="text-sm text-gray-500">社区论坛的提问通常在24小时内回复，紧急问题响应速度一般。</p></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- 1. Hero -->
+  <header class="hero_sec">
+    <div class="hero_mark">治愈</div>
+    <h1 class="hero_title">《安全套测试员》漫画 · <span>治愈番</span>专区</h1>
+    <p class="hero_sub">柔软的日常，安静的陪伴。海量国漫、日漫、条漫里的治愈番与日常番，在线看、每日更新。</p>
+    <a href="#cure" class="hero_btn">进入治愈番列表</a>
+  </header>
 
-    <!-- Feature Detail 功能详解 -->
-    <section id="features" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-emerald-600 font-semibold text-sm tracking-widest uppercase">Features</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">鉴黄师免费下 核心功能详解</h2>
-                <p class="text-gray-500 mt-3 max-w-2xl mx-auto">我们亲自安装并深度体验了鉴黄师免费下的每一个模块，以下是最值得关注的亮点功能。</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- 功能1 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-chart-column"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">运营数据看板</h3>
-                    <p class="text-gray-600 leading-relaxed">索引、更新与基础访问趋势可在后台查看，围绕whiteashley76.github.io生态做策略迭代更有依据。</p>
-                </div>
-                <!-- 功能2 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-shield"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">基础安全防护</h3>
-                    <p class="text-gray-600 leading-relaxed">后台防爆破、关键操作校验与备份机制，降低鉴黄师免费下站点被篡改与数据丢失风险。</p>
-                </div>
-                <!-- 功能3 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-link"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">内链自动编织</h3>
-                    <p class="text-gray-600 leading-relaxed">按关键词与栏目关系生成内链，提高蜘蛛爬行深度，对长尾落地页更友好。</p>
-                </div>
-                <!-- 功能4 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-cloud-arrow-up"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">发布与同步</h3>
-                    <p class="text-gray-600 leading-relaxed">支持批量发布与模板同步，多成员协作时减少版本不一致问题。</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- 2. 治愈番列表 -->
+  <section class="sec_block" id="cure">
+    <div class="sec_head">
+      <h2>治愈番列表 · 15 部暖心力作</h2>
+      <p>按治愈指数排序，由《安全套测试员》漫画编辑部整理</p>
+      <span class="mark_line"></span>
+    </div>
+    <div class="cure_grid">
 
-    <!-- System Requirements 系统要求 -->
-    <section id="requirements" class="py-16 bg-gray-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-emerald-600 font-semibold text-sm tracking-widest uppercase">Requirements</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">系统环境要求</h2>
-                <p class="text-gray-500 mt-3">运行 鉴黄师免费下 需要满足以下基本服务器配置，推荐搭配 Nginx 使用以获得最佳性能。</p>
-            </div>
-            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
-                <table class="w-full text-sm sm:text-base">
-                    <thead>
-                        <tr class="bg-emerald-600 text-white text-left">
-                            <th class="px-6 py-4 font-semibold">项目</th>
-                            <th class="px-6 py-4 font-semibold">最低配置</th>
-                            <th class="px-6 py-4 font-semibold">推荐配置</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fab fa-php text-emerald-600 mr-2"></i>PHP 版本</td>
-                            <td class="px-6 py-4 text-gray-600">7.2+</td>
-                            <td class="px-6 py-4 text-gray-600">8.1+</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-database text-emerald-600 mr-2"></i>数据库</td>
-                            <td class="px-6 py-4 text-gray-600">MySQL 5.6 / SQLite</td>
-                            <td class="px-6 py-4 text-gray-600">MySQL 8.0 + Redis</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-server text-emerald-600 mr-2"></i>Web 服务器</td>
-                            <td class="px-6 py-4 text-gray-600">Apache / IIS</td>
-                            <td class="px-6 py-4 text-gray-600">Nginx 1.20+</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-memory text-emerald-600 mr-2"></i>内存</td>
-                            <td class="px-6 py-4 text-gray-600">512 MB</td>
-                            <td class="px-6 py-4 text-gray-600">2 GB 及以上</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-globe text-emerald-600 mr-2"></i>浏览器支持</td>
-                            <td class="px-6 py-4 text-gray-600">Chrome / Edge</td>
-                            <td class="px-6 py-4 text-gray-600">Chrome / Edge / Safari</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/SEO%E7%9B%AE%E5%BD%95%E7%AB%99%E7%BE%A4%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-emerald-a400ddd5/800/450" alt="治愈番 暖阳下的午后 插画">
+        <div class="cure_body">
+          <h3>暖阳下的午后</h3>
+          <p class="cure_author">创作者 · 林小满</p>
+          <p class="cure_desc">一个人、一只猫、一间旧书店。把生活里最小的温柔画进每一格。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.8</span><span class="cure_tag">日常番</span></div>
         </div>
-    </section>
+      </article>
 
-    <!-- Download CTA 醒目下载区 -->
-    <section id="download" class="relative py-20 overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-700">
-        <div class="absolute inset-0 opacity-10">
-            <i class="fas fa-braille absolute top-10 left-10 text-7xl text-white"></i>
-            <i class="fas fa-cube absolute bottom-10 right-10 text-8xl text-white"></i>
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/night-star-sky/800/600" alt="治愈番 星空邮差 插画">
+        <div class="cure_body">
+          <h3>星空邮差</h3>
+          <p class="cure_author">创作者 · 江北野</p>
+          <p class="cure_desc">给住在很远的人送一封信，慢慢走，路上有很多值得停下来的风景。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.6</span><span class="cure_tag">奇幻番</span></div>
         </div>
-        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">立即下载 鉴黄师免费下</h2>
-            <p class="text-emerald-100 text-lg mb-8">最新版本已通过全面测试，安装即可体验全部功能。免费升级，售后无忧。</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#" class="inline-flex items-center gap-3 bg-white hover:bg-gray-100 transition text-emerald-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-xl w-full sm:w-auto justify-center">
-                    <i class="fas fa-download text-2xl"></i> 查看版本
-                </a>
-                <a href="#" class="inline-flex items-center gap-3 border-2 border-white/60 hover:border-white hover:bg-white/10 transition text-white font-semibold px-8 py-4 rounded-2xl w-full sm:w-auto justify-center backdrop-blur-sm">
-                    <i class="fas fa-circle-question text-xl"></i> 站群矩阵帮助文档
-                </a>
-            </div>
-            <p class="mt-6 text-emerald-200 text-sm"><i class="fas fa-shield-halved mr-1"></i> 本站文件均经过 MD5 校验，放心下载</p>
-        </div>
-    </section>
+      </article>
 
-    <!-- FAQ 常见问题 -->
-    <section id="faq" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-emerald-600 font-semibold text-sm tracking-widest uppercase">FAQ</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">关于 鉴黄师免费下 的常见问题</h2>
-            </div>
-            <div class="space-y-4">
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-emerald-600 mr-2"></i>环境检测脚本场景怎么迁移数据？</span>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">导出SQL与附件后，在新机恢复并修改连接配置即可。迁移后优先检查伪静态与权限，避免图片与分页失效。</p>
-                </details>
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-emerald-600 mr-2"></i>百度收录慢怎么办？</span>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">检查Sitemap、内链与页面打开速度，避免重复标题。稳定更新比一次性海量生成更有效，可结合站长平台观察抓取。</p>
-                </details>
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-emerald-600 mr-2"></i>是否适合团队协作？</span>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">可以。通过权限分级把内容、模板与发布分开，重要操作留日志，减少误改。whiteashley76.github.io文档中心可沉淀团队规范。</p>
-                </details>
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-emerald-600 mr-2"></i>版本更新是否免费？</summary>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">鉴黄师免费下的正式版授权用户可以免费获取所有小版本升级，每次升级都包含性能优化与安全修复，建议保持后台自动更新开启。</p>
-                </details>
-            </div>
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/desk-reading/800/600" alt="治愈番 书桌边的四季 插画">
+        <div class="cure_body">
+          <h3>书桌边的四季</h3>
+          <p class="cure_author">创作者 · 陈以南</p>
+          <p class="cure_desc">春夏秋冬，同一张书桌。写作业、发呆、偷偷画小人的一百个瞬间。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.5</span><span class="cure_tag">校园番</span></div>
         </div>
-    </section>
+      </article>
 
-    <!-- Footer 网站底部 -->
-    <footer class="bg-gray-900 text-gray-400 pt-14 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-10">
-                <div class="col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-emerald-500 text-2xl"><i class="fas fa-cubes"></i></span>
-                        <span class="font-bold text-white text-lg">鉴黄师免费下</span>
-                    </div>
-                    <p class="text-sm leading-relaxed">鉴黄师免费下适合目录站、资源导航与黄页场景，内置结构优化与发布策略，便于在百度等搜索引擎中建立稳定入口。。本站致力于提供最专业、最客观的鉴黄师免费下评测与下载服务。</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">快速导航</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#review" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>评测总览</a></li>
-                        <li><a href="#pros-cons" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>优缺点对比</a></li>
-                        <li><a href="#features" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>功能详解</a></li>
-                        <li><a href="#download" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>下载入口</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">相关资源</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>whiteashley76.github.io官方文档</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>站群矩阵模板中心</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>环境检测脚本插件库</a></li>
-                        <li><a href="#faq" class="hover:text-emerald-400 transition"><i class="fas fa-angle-right mr-2"></i>帮助中心</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-                <p>© 2026 鉴黄师免费下 评测页模板 · 本站为独立评测网站，不隶属于任何机构</p>
-                <p><i class="fas fa-heart text-emerald-600 mr-1"></i> 用心评测，为站长服务</p>
-            </div>
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/book-close-up/800/600" alt="治愈番 旧书页的温度 插画">
+        <div class="cure_body">
+          <h3>旧书页的温度</h3>
+          <p class="cure_author">创作者 · 苏叶白</p>
+          <p class="cure_desc">翻到夹着书签的那一页，忽然想起十年前的自己。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.4</span><span class="cure_tag">条漫</span></div>
         </div>
-    </footer>
+      </article>
 
-</body>
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/art-painting/800/600" alt="治愈番 画一张你的样子 插画">
+        <div class="cure_body">
+          <h3>画一张你的样子</h3>
+          <p class="cure_author">创作者 · 顾南枝</p>
+          <p class="cure_desc">画室里总有一盏灯为你留着，也总有一个位置为你空着。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.3</span><span class="cure_tag">国漫</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/open-book/800/600" alt="治愈番 翻开的第三百页 插画">
+        <div class="cure_body">
+          <h3>翻开的第三百页</h3>
+          <p class="cure_author">创作者 · 何听风</p>
+          <p class="cure_desc">故事讲到一半停了下来，剩下的一半交给你自己补完。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.2</span><span class="cure_tag">日漫</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/modern-art/800/600" alt="治愈番 一杯热牛奶 插画">
+        <div class="cure_body">
+          <h3>一杯热牛奶</h3>
+          <p class="cure_author">创作者 · 周小然</p>
+          <p class="cure_desc">深夜厨房的小小仪式感，喝完就安心睡觉。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.1</span><span class="cure_tag">日常番</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/reading-time/800/600" alt="治愈番 窗边的阅读时光 插画">
+        <div class="cure_body">
+          <h3>窗边的阅读时光</h3>
+          <p class="cure_author">创作者 · 沈拾玖</p>
+          <p class="cure_desc">雨天的下午，一杯茶，一本书，一段不需要对话的时间。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 9.0</span><span class="cure_tag">条漫</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/galaxy-nebula/800/600" alt="治愈番 星云里的晚安 插画">
+        <div class="cure_body">
+          <h3>星云里的晚安</h3>
+          <p class="cure_author">创作者 · 云深不知</p>
+          <p class="cure_desc">睡前十分钟的短篇，闭眼前看一眼很远很远的银河。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 8.9</span><span class="cure_tag">奇幻番</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/library-shelf/800/600" alt="治愈番 图书馆第七排 插画">
+        <div class="cure_body">
+          <h3>图书馆第七排</h3>
+          <p class="cure_author">创作者 · 柯木南</p>
+          <p class="cure_desc">高三的两个人，在同一排书架前，从没说过一句话。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 8.8</span><span class="cure_tag">校园番</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/star-distant-view/800/600" alt="治愈番 远方的灯塔 插画">
+        <div class="cure_body">
+          <h3>远方的灯塔</h3>
+          <p class="cure_author">创作者 · 洛十一</p>
+          <p class="cure_desc">海边小城的守塔人，和每年夏天都会来一次的那个孩子。</p>
+          <div class="cure_meta"><span class="cure_index">治愈指数 8.7</span><span class="cure_tag">日漫</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/book-stack/800/600" alt="治愈番 攒起来的好天气 插画">
+        <div class="cure_body">
+          <h3>攒起来的好天气</h3>
+          <p class="cure_author">创作者 · 白露未晞</p>
+          <p class="cure_desc">把每一次晴朗都画进本子里，下雨天就能拿出来看看。</p>
+          <div class="cure_meta"><span class="cure_index">8.6</span><span class="cure_tag">国漫</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/starry-galaxy/800/600" alt="治愈番 银河列车慢车 插画">
+        <div class="cure_body">
+          <h3>银河列车慢车</h3>
+          <p class="cure_author">创作者 · 季夏七</p>
+          <p class="cure_desc">一趟永远不抵达终点的列车，乘客们都在等一个人。</p>
+          <div class="cure_meta"><span class="cure_index">8.5</span><span class="cure_tag">奇幻番</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/cosmos-earth/800/600" alt="治愈番 从地球寄出去 插画">
+        <div class="cure_body">
+          <h3>从地球寄出去</h3>
+          <p class="cure_author">创作者 · 林间有雾</p>
+          <p class="cure_desc">写给十年后的自己，信很短，但画了很久。</p>
+          <div class="cure_meta"><span class="cure_index">8.4</span><span class="cure_tag">条漫</span></div>
+        </div>
+      </article>
+
+      <article class="cure_card">
+        <img src="https://picsum.photos/seed/starry-night/800/600" alt="治愈番 晚安之前的十分钟 插画">
+        <div class="cure_body">
+          <h3>晚安之前的十分钟</h3>
+          <p class="cure_author">创作者 · 温郁青</p>
+          <p class="cure_desc">短篇合集，每话都是一个可以独自看完的温柔故事。</p>
+          <div class="cure_meta"><span class="cure_index">8.3</span><span class="cure_tag">日常番</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 3. 治愈类型 -->
+  <section class="sec_block" id="genre" style="background:rgba(233,210,182,0.35);border-radius:26px;">
+    <div class="sec_head">
+      <h2>治愈类型 · 挑一种心情</h2>
+      <p>国漫、日漫、条漫里的六大治愈方向</p>
+      <span class="mark_line"></span>
+    </div>
+    <div class="genre_wrap">
+      <div class="genre_card">
+        <div class="genre_icon">日</div>
+        <h3>日常治愈</h3>
+        <p>没有大事发生，只有一顿饭、一束光、一次散步。</p>
+      </div>
+      <div class="genre_card">
+        <div class="genre_icon">校</div>
+        <h3>校园治愈</h3>
+        <p>教室后排、下课铃、走廊尽头的那个背影。</p>
+      </div>
+      <div class="genre_card">
+        <div class="genre_icon">奇</div>
+        <h3>奇幻治愈</h3>
+        <p>会说话的猫、会飘的岛、会消失的夏天。</p>
+      </div>
+      <div class="genre_card">
+        <div class="genre_icon">动</div>
+        <h3>动物治愈</h3>
+        <p>猫、狗、狐狸、鲸鱼，安静地陪着你。</p>
+      </div>
+      <div class="genre_card">
+        <div class="genre_icon">食</div>
+        <h3>美食治愈</h3>
+        <p>深夜食堂式的温度，一口就能把人哄好。</p>
+      </div>
+      <div class="genre_card">
+        <div class="genre_icon">星</div>
+        <h3>星空治愈</h3>
+        <p>抬头看天，把烦恼缩得很小很小。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 日常推荐 -->
+  <section class="sec_block" id="daily">
+    <div class="sec_head">
+      <h2>日常推荐 · 今天看这些</h2>
+      <p>适合通勤、睡前、午休随手翻的短篇日常</p>
+      <span class="mark_line"></span>
+    </div>
+    <div class="daily_grid">
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/cosmos-stars/800/600" alt="日常推荐 今天也准时下班 插画">
+        <div class="daily_info">
+          <h3>今天也准时下班</h3>
+          <span>创作者 · 方有余</span>
+          <p>打工人版治愈，回家路上的便利店关东煮。</p>
+        </div>
+      </a>
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/art-work-2/800/600" alt="日常推荐 阳台上的两盆土 插画">
+        <div class="daily_info">
+          <h3>阳台上的两盆土</h3>
+          <span>创作者 · 池小鱼</span>
+          <p>种什么死什么，但依然每年春天重新开始。</p>
+        </div>
+      </a>
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/book-close-up/800/600" alt="日常推荐 便利店的第三个货架 插画">
+        <div class="daily_info">
+          <h3>便利店的第三个货架</h3>
+          <span>创作者 · 陆见山</span>
+          <p>夜班店员和常客之间，不用说话的默契。</p>
+        </div>
+      </a>
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/deep-blue-stars/800/600" alt="日常推荐 一个人吃火锅 插画">
+        <div class="daily_info">
+          <h3>一个人吃火锅</h3>
+          <span>创作者 · 江晚吟</span>
+          <p>不用点太多，但每一样都要是自己喜欢的。</p>
+        </div>
+      </a>
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/reading-time/800/600" alt="日常推荐 楼下的修鞋摊 插画">
+        <div class="daily_info">
+          <h3>楼下的修鞋摊</h3>
+          <span>创作者 · 南墙旧事</span>
+          <p>一把小凳子坐着，看一整条街的人来人往。</p>
+        </div>
+      </a>
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/desk-reading/800/600" alt="日常推荐 屋顶上的晾衣绳 插画">
+        <div class="daily_info">
+          <h3>屋顶上的晾衣绳</h3>
+          <span>创作者 · 程屿白</span>
+          <p>风把衣服吹起来的时候，夏天就有了形状。</p>
+        </div>
+      </a>
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/galaxy-nebula/800/600" alt="日常推荐 给植物说晚安 插画">
+        <div class="daily_info">
+          <h3>给植物说晚安</h3>
+          <span>创作者 · 温屿川</span>
+          <p>每天睡前对着窗台说一句，也是一种陪伴。</p>
+        </div>
+      </a>
+      <a class="daily_card" href="#cure">
+        <img src="https://picsum.photos/seed/open-book/800/600" alt="日常推荐 周三的旧书店 插画">
+        <div class="daily_info">
+          <h3>周三的旧书店</h3>
+          <span>创作者 · 沈南辞</span>
+          <p>老板每周三只卖五本书，多了不卖。</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. 治愈排行 -->
+  <section class="sec_block" id="rank" style="background:rgba(233,210,182,0.35);border-radius:26px;">
+    <div class="sec_head">
+      <h2>治愈排行 · Top 8</h2>
+      <p>《安全套测试员》漫画站内读者一周口味榜</p>
+      <span class="mark_line"></span>
+    </div>
+    <div class="rank_list">
+      <div class="rank_item">
+        <div class="rank_no">1</div>
+        <img src="https://picsum.photos/seed/art-installation/800/600" alt="排行 暖阳下的午后">
+        <div class="rank_info"><h3>暖阳下的午后</h3><p>林小满 · 日常番 · 更新至 84 话</p></div>
+        <div class="rank_score">9.8</div>
+      </div>
+      <div class="rank_item">
+        <div class="rank_no">2</div>
+        <img src="https://picsum.photos/seed/night-star-sky/800/600" alt="排行 星空邮差">
+        <div class="rank_info"><h3>星空邮差</h3><p>江北野 · 奇幻番 · 更新至 62 话</p></div>
+        <div class="rank_score">8.7</div>
+      </div>
+      <div class="rank_item">
+        <div class="rank_no">3</div>
+        <img src="https://picsum.photos/seed/desk-reading/800/600" alt="排行 书桌边的四季">
+        <div class="rank_info"><h3>书桌边的四季</h3><p>陈以南 · 校园番 · 已完结</p></div>
+        <div class="rank_score">9.5</div>
+      </div>
+      <div class="rank_item">
+        <div class="rank_no">4</div>
+        <img src="https://picsum.photos/seed/book-close-up/800/600" alt="排行 旧书页的温度">
+        <div class="rank_info"><h3>旧书页的温度</h3><p>苏叶白 · 条漫 · 更新至 118 话</p></div>
+        <div class="rank_score">9.4</div>
+      </div>
+      <div class="rank_item">
+        <div class="rank_no">5</div>
+        <img src="https://picsum.photos/seed/art-painting/800/600" alt="排行 画一张你的样子">
+        <div class="rank_info"><h3>画一张你的样子</h3><p>顾南枝 · 国漫 · 更新至 47 话</p></div>
+        <div class="rank_score">9.3</div>
+      </div>
+      <div class="rank_item">
+        <div class="rank_no">6</div>
+        <img src="https://picsum.photos/seed/open-book/800/600" alt="排行 翻开的第三百页">
+        <div class="rank_info"><h3>翻开的第三百页</h3><p>何听风 · 日漫 · 更新至 73 话</p></div>
+        <div class="rank_score">9.2</div>
+      </div>
+      <div class="rank_item">
+        <div class="rank_no">7</div>
+        <img src="https://picsum.photos/seed/modern-art/800/600" alt="排行 一杯热牛奶">
+        <div class="rank_info"><h3>一杯热牛奶</h3><p>周小然 · 日常番 · 短篇合集</p></div>
+        <div class="rank_score">9.1</div>
+      </div>
+      <div class="rank_item">
+        <div class="rank_no">8</div>
+        <img src="https://picsum.photos/seed/reading-time/800/600" alt="排行 窗边的阅读时光">
+        <div class="rank_info"><h3>窗边的阅读时光</h3><p>沈拾玖 · 条漫 · 更新至 96 话</p></div>
+        <div class="rank_score">9.0</div>
+      </div>
+    </div>
+  </section>
+<!-- env:prod -->
+
+  <!-- 6. 同理推荐 -->
+  <section class="sec_block" id="similar">
+    <div class="sec_head">
+      <h2>同理推荐 · 看完这些再看这些</h2>
+      <p>喜欢治愈番的读者，通常也会收藏这几部</p>
+      <span class="mark_line"></span>
+    </div>
+    <div class="similar_wrap">
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/star-distant-view/800/600" alt="同理推荐 远方的灯塔">
+        <h3>远方的灯塔</h3>
+        <p>洛十一 · 日漫 · 海边慢节奏</p>
+      </div>
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/library-shelf/800/600" alt="同理推荐 图书馆第七排">
+        <h3>图书馆第七排</h3>
+        <p>柯木南 · 校园番 · 青春暗流</p>
+      </div>
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/book-stack/800/600" alt="同理推荐 攒起来的好天气">
+        <h3>攒起来的好天气</h3>
+        <p>白露未晞 · 国漫 · 手账式分镜</p>
+      </div>
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/starry-galaxy/800/600" alt="同理推荐 银河列车慢车">
+        <h3>银河列车慢车</h3>
+        <p>季夏七 · 奇幻番 · 单元剧结构</p>
+      </div>
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/cosmos-earth/800/600" alt="同理推荐 从地球寄出去">
+        <h3>从地球寄出去</h3>
+        <p>林间有雾 · 条漫 · 书信体叙事</p>
+      </div>
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/starry-night/800/600" alt="同理推荐 晚安之前的十分钟">
+        <h3>晚安之前的十分钟</h3>
+        <p>温郁青 · 日常番 · 睡前短篇</p>
+      </div>
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/cosmos-stars/800/600" alt="同理推荐 星云里的晚安">
+        <h3>星云里的晚安</h3>
+        <p>云深不知 · 奇幻番 · 星空氛围</p>
+      </div>
+      <div class="similar_card">
+        <img src="https://picsum.photos/seed/art-work-2/800/600" alt="同理推荐 阳台上的两盆土">
+        <h3>阳台上的两盆土</h3>
+        <p>池小鱼 · 日常番 · 四季观察</p>
+      </div>
+    </div>
+  </section>
+<!-- slot:main -->
+
+  <!-- 7. 开始观看 CTA -->
+  <section class="cta_sec" id="cta">
+    <div class="cta_box">
+      <h2>现在开始观看</h2>
+      <p>《安全套测试员》漫画 · 治愈番专区，国漫日漫条漫一站看全，每日更新，手机追番不卡顿。</p>
+      <a href="#cure" class="cta_btn">立即追番</a>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer_sec">
+    <div class="footer_top">
+      <div class="footer_brand">
+        <h3>《安全套测试员》漫画</h3>
+        <p>专注治愈番与日常番的在线看专区，收录海量国漫、日漫、条漫，每日更新，随时看漫。</p>
+      </div>
+      <div class="footer_nav">
+        <h4>快速导航</h4>
+        <a href="#cure">治愈番列表</a>
+        <a href="#genre">治愈类型</a>
+        <a href="#daily">日常推荐</a>
+        <a href="#rank">治愈排行</a>
+        <a href="#similar">同理推荐</a>
+      </div>
+      <div class="footer_nav">
+        <h4>内容分类</h4>
+        <a href="#cure">国漫专区</a>
+        <a href="#cure">日漫专区</a>
+        <a href="#cure">条漫精选</a>
+        <a href="#rank">经典老番</a>
+      </div>
+    </div>
+    <div class="footer_disclaim">
+      本站所有漫画作品信息仅用于展示与推荐，内容由创作者提供，本站不存储任何漫画文件。如有版权问题请联系处理。
+    </div>
+    <div class="footer_bottom">
+      © 2026 《安全套测试员》漫画 · 保留所有权利
+      <span>川ICP备202476754788号-11</span>
+    </div>
+  </footer>
+<!-- track:pv -->
+
+</div>
+
+
+    <script>
+    (function(){
+      var items = document.querySelectorAll('section, article, .card, .feature-card, .content-card, .vcard, .post, .review-card, .category-card, .board-row, .rank-item, .playlist-card, .faq-item');
+      if (!items.length) return;
+      items.forEach(function(el){
+        if (!el.classList.contains('auto-reveal')) el.classList.add('auto-reveal');
+      });
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('auto-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: '0px 0px 60px 0px' });
+      document.querySelectorAll('.auto-reveal').forEach(function(el){ io.observe(el); });
+    })();
+    </script>
+    
+    <script>
+    (function(){
+      function fixImg(img){
+        if (img.dataset.fallbackApplied) return;
+        img.dataset.fallbackApplied = '1';
+        img.src = 'https://picsum.photos/seed/fb' + Math.floor(Math.random()*100000) + '/800/600';
+      }
+      document.querySelectorAll('img').forEach(function(img){
+        img.addEventListener('error', function(){ fixImg(this); });
+        if (img.complete && img.naturalWidth === 0) { fixImg(img); }
+      });
+    })();
+    </script>
+    </body>
 </html>

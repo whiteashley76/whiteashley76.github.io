@@ -2,265 +2,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>91黑料hl每日大赛 - 功能解析与部署</title>
-    <meta name="description" content="91黑料hl每日大赛强调「可运营」：从栏目规则、内容归类到数据监控一体打通，减少重复劳动，让更新频率和收录质量同步提升。">
+    <title>自动泛目录生成系统 - 批量建站与SEO优化的效率之选，2025新版体验</title>
+    <meta name="description" content="自动泛目录生成系统是一款专为SEO从业者设计的批量建站工具，能够快速生成大量目录页面，提升网站收录效率。本文从实际使用角度出发，评测该系统的核心功能、优缺点及适用场景，帮助你判断是否值得入手。">
+    <meta name="keywords" content="自动泛目录生成系统：批量建站与SEO优化的效率工具,批量生成,SEO工具">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
-                    },
-                },
-            },
-        };
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534'
+                        }
+                    }
+                }
+            }
+        }
     </script>
-<style id="v-9e1b3339">:root{--v-seed:9e1b3339;--v-theme:sky;}</style><meta name="x-variant" content="9e1b3339"><!-- page p02 theme sky -->
+<style id="v-cc6d433f">:root{--v-seed:cc6d433f;--v-theme:sky;}</style><meta name="x-variant" content="cc6d433f"><!-- page p02 theme sky ai=1 -->
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased antialiased selection:bg-sky-200 selection:text-sky-900" data-variant="9e1b3339">
 
-    <!-- 顶部导航 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-2">
-                    <span class="text-sky-600 text-2xl"><i class="fas fa-layer-group"></i></span>
-                    <span class="font-bold text-gray-900 text-lg">91黑料hl每日大赛</span>
-                    <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-sky-100 text-sky-700">深度实测</span>
-                </div>
-                <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-                    <a href="#review" class="hover:text-sky-600 transition">评测总览</a>
-                    <a href="#pros-cons" class="hover:text-sky-600 transition">优缺点</a>
-                    <a href="#features" class="hover:text-sky-600 transition">功能详解</a>
-                    <a href="#requirements" class="hover:text-sky-600 transition">系统要求</a>
-                    <a href="#faq" class="hover:text-sky-600 transition">常见问题</a>
-                </div>
-                <a href="#download" class="inline-flex items-center gap-1.5 bg-sky-600 hover:bg-sky-700 transition text-white text-sm font-semibold px-4 py-2 rounded-lg">
-                    <i class="fas fa-download"></i> 查看版本
-                </a>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased leading-relaxed antialiased selection:bg-green-200 selection:text-green-900" data-variant="cc6d433f">
+
+    <!-- ======= 导航 ======= -->
+    <header class="bg-white border-b border-green-100 sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-layer-group text-white text-sm"></i>
+                </span>
+                <span class="font-bold text-gray-900">自动泛目录生成系统：批量建站与SEO优化的效率工具</span>
+                <span class="text-xs bg-green-600 text-white px-2 py-0.5 rounded-full font-medium">评测</span>
             </div>
-        </div>
-    </nav>
+            <div class="hidden md:flex items-center space-x-6 text-sm text-gray-600">
+                <a href="#features" class="hover:text-green-600 transition">功能详解</a>
+                <a href="#proscons" class="hover:text-green-600 transition">优点缺点</a>
+                <a href="#specs" class="hover:text-green-600 transition">系统要求</a>
+                <a href="#faq" class="hover:text-green-600 transition">FAQ</a>
+            </div>
+            <a href="#download" class="bg-green-600 hover:bg-green-700 text-white text-sm px-5 py-2 rounded-lg font-semibold transition shadow-lg">
+                <i class="fa-solid fa-download mr-1"></i>查看版本
+            </a>
+        </nav>
+    </header>
 
-    <!-- Hero 评测头图 -->
-    <section id="review" class="bg-white pb-12 pt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="inline-flex items-center gap-1.5 bg-sky-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                            <i class="fas fa-star"></i> 编辑推荐
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">
-                            <i class="fas fa-rotate"></i> 2024年最新版
-                        </span>
-                    </div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-                        91黑料hl每日大赛
-                    </h1>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-4">91黑料hl每日大赛强调「可运营」：从栏目规则、内容归类到数据监控一体打通，减少重复劳动，让更新频率和收录质量同步提升。</p>
-                    <p class="text-gray-500 mb-8">如果你正在筹备目录型站点，91黑料hl每日大赛 能显著缩短从选题到上线的周期；下文结合 智能栏目规则、内链蜘蛛池 给出配置建议与避坑清单。</p>
-                    <div class="flex flex-wrap items-center gap-4">
-                        <a href="#download" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 transition text-white text-base font-semibold px-6 py-3 rounded-xl shadow-lg shadow-sky-200">
-                            <i class="fas fa-download"></i> 查看最新版本
-                        </a>
-                        <a href="#features" class="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 transition text-gray-800 text-base font-semibold px-6 py-3 rounded-xl">
-                            <i class="fas fa-book-open"></i> 功能详解
-                        </a>
-                    </div>
-                    <div class="mt-6 flex items-center gap-5 text-sm text-gray-500">
-                        <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-sky-600"></i> 免费试用</span>
-                        <span class="flex items-center gap-1.5"><i class="fas fa-shield-halved text-sky-600"></i> 正版授权</span>
-                        <span class="flex items-center gap-1.5"><i class="fas fa-headset text-sky-600"></i> 技术支持</span>
-                    </div>
+    <!-- ======= 评测头图 Hero ======= -->
+    <section class="bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+                <div class="flex items-center space-x-2 mb-3">
+                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">2023年度新版</span>
+                    <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">v4.2.0</span>
                 </div>
-                <div class="relative">
-                    <div class="absolute inset-0 bg-sky-200 rounded-3xl blur-2xl opacity-40"></div>
-                    <div class="relative bg-white p-2 rounded-3xl shadow-2xl border border-gray-100">
-                        <img src="https://picsum.photos/seed/91%E9%BB%91%E6%96%99hl%E6%AF%8F%E6%97%A5%E5%A4%A7%E8%B5%9B-sky-9e1b3339/800/450" alt="91黑料hl每日大赛 官网评测" class="rounded-2xl w-full h-auto object-cover">
-                    </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-snug">自动泛目录生成系统：批量建站与SEO优化的效率工具 深度评测</h1>
+                <p class="text-gray-600 mb-4">自动泛目录生成系统是一款专为SEO从业者设计的批量建站工具，能够快速生成大量目录页面，提升网站收录效率。本文从实际使用角度出发，评测该系统的核心功能、优缺点及适用场景，帮助你判断是否值得入手。</p>
+                <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                    <li><i class="fa-solid fa-circle-check text-green-600 mr-2"></i>高效建站，快速生成海量目录页</li>
+                    <li><i class="fa-solid fa-circle-check text-green-600 mr-2"></i>智能蜘蛛模拟，收录效率大幅提升</li>
+                    <li><i class="fa-solid fa-circle-check text-green-600 mr-2"></i>多模板引擎，泛目录一键切换</li>
+                </ul>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#download" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition shadow-md inline-flex items-center">
+                        <i class="fa-solid fa-download mr-2"></i>查看版本
+                    </a>
+                    <a href="#proscons" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold transition inline-flex items-center">
+                        <i class="fa-regular fa-star mr-2"></i>重难点评价
+                    </a>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">支持 批量生成 / SEO工具 等运行环境</p>
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="rounded-xl overflow-hidden shadow-lg ring-1 ring-gray-200">
+                    <img src="https://picsum.photos/seed/%E8%87%AA%E5%8A%A8%E6%B3%9B%E7%9B%AE%E5%BD%95%E7%94%9F%E6%88%90%E7%B3%BB%E7%BB%9F%EF%BC%9A%E6%89%B9%E9%87%8F%E5%BB%BA%E7%AB%99%E4%B8%8ESEO%E4%BC%98%E5%8C%96%E7%9A%84%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7-sky-cc6d433f/800/450" alt="自动泛目录生成系统：批量建站与SEO优化的效率工具 主视觉" class="w-full h-auto object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 核心数据快捷栏 -->
-    <section class="bg-white border-b border-gray-200 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="flex items-center gap-3">
-                <i class="fas fa-bolt text-sky-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">9.3</p>
-                    <p class="text-sm text-gray-500">综合评分</p>
-                </div>
+    <!-- ======= 评分速览条 ======= -->
+    <section class="bg-green-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="flex flex-col items-center">
+                <span class="text-2xl font-bold">9.2</span>
+                <span class="text-xs opacity-80">易用性</span>
             </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-cloud-arrow-down text-sky-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">128K</p>
-                    <p class="text-sm text-gray-500">月度下载</p>
-                </div>
+            <div class="flex flex-col items-center">
+                <span class="text-2xl font-bold">8.8</span>
+                <span class="text-xs opacity-80">收录效果</span>
             </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-gauge-high text-sky-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">0.4s</p>
-                    <p class="text-sm text-gray-500">平均响应</p>
-                </div>
+            <div class="flex flex-col items-center">
+                <span class="text-2xl font-bold">9.0</span>
+                <span class="text-xs opacity-80">模板丰富度</span>
             </div>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-life-ring text-sky-600 text-2xl"></i>
-                <div>
-                    <p class="text-2xl font-bold text-gray-900">99.7%</p>
-                    <p class="text-sm text-gray-500">稳定率</p>
-                </div>
+            <div class="flex flex-col items-center">
+                <span class="text-2xl font-bold">8.5</span>
+                <span class="text-xs opacity-80">技术客服</span>
             </div>
         </div>
     </section>
 
-    <!-- Pros & Cons 优缺点对比 -->
-    <section id="pros-cons" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-sky-600 font-semibold text-sm tracking-widest uppercase">Pros & Cons</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">91黑料hl每日大赛 优缺点全面评测</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- 优点 -->
-                <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-5">
-                        <span class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-lg"><i class="fas fa-thumbs-up"></i></span>
-                        <h3 class="text-xl font-semibold text-gray-900">优点</h3>
+    <!-- ======= 优缺点对比 ======= -->
+    <section id="proscons" class="py-12 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">优点与缺点分析</h2>
+            <p class="text-center text-gray-500 text-sm mb-8">客观评估 自动泛目录生成系统：批量建站与SEO优化的效率工具 的核心表现</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl border border-green-100 shadow-lg p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center"><i class="fa-solid fa-thumbs-up text-green-600"></i></span>
+                        <h3 class="font-bold text-gray-900">优点</h3>
                     </div>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">收录结构清晰</span><p class="text-sm text-gray-500">层级、内链与TDK策略可配置，有利于搜索引擎理解站点主题并提升索引效率。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">移动端友好</span><p class="text-sm text-gray-500">响应式布局保证手机访问体验，降低跳出率，适配本地与资讯类流量结构。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">扩展灵活</span><p class="text-sm text-gray-500">模板与插件机制便于二次开发，不同行业可快速换皮上线。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-check text-green-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">安全稳定</span><p class="text-sm text-gray-500">定期发布安全补丁，防注入、防XSS策略完善，给网站提供可靠的安全保障。</p></div>
-                        </li>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i><span><strong class="text-gray-800">内置蜘蛛池</strong> — 自动模拟百度爬虫抓取逻辑，提升目录被收录概率。</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i><span><strong class="text-gray-800">一键泛目录</strong> — 支持无限级目录生成，批量操作效率极高。</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i><span><strong class="text-gray-800">多主题切换</strong> — 内置 20 余套精美模板，自由组合栏目与样式。</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i><span><strong class="text-gray-800">轻量部署</strong> — 前后端分离架构，普通虚拟主机也能稳定运行。</span></li>
                     </ul>
                 </div>
-                <!-- 缺点 -->
-                <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-5">
-                        <span class="w-10 h-10 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center text-lg"><i class="fas fa-thumbs-down"></i></span>
-                        <h3 class="text-xl font-semibold text-gray-900">缺点</h3>
+                <div class="bg-white rounded-xl border border-red-100 shadow-lg p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center"><i class="fa-solid fa-thumbs-down text-red-500"></i></span>
+                        <h3 class="font-bold text-gray-900">缺点</h3>
                     </div>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-sky-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">服务器有门槛</span><p class="text-sm text-gray-500">并发与缓存配置不当会影响打开速度，建议搭配Nginx与缓存策略。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-sky-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">词库质量影响大</span><p class="text-sm text-gray-500">低质堆砌词会浪费页面权重，上线前应做清洗与分级。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-sky-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">安全需重视</span><p class="text-sm text-gray-500">后台暴露面较大，应开启二次验证、改默认路径并定期备份。</p></div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fas fa-circle-xmark text-sky-500 mt-1"></i>
-                            <div><span class="font-medium text-gray-800">官方支持时差</span><p class="text-sm text-gray-500">社区论坛的提问通常在24小时内回复，紧急问题响应速度一般。</p></div>
-                        </li>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex gap-2"><i class="fa-solid fa-xmark text-red-400 mt-1"></i><span><strong class="text-gray-800">学习门槛</strong> — 新手需理解伪静态规则和蜘蛛池原理，文档偏技术向。</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-xmark text-red-400 mt-1"></i><span><strong class="text-gray-800">资源占用</strong> — 大量目录生成时内存占用偏高，建议使用大内存机器。</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-xmark text-red-400 mt-1"></i><span><strong class="text-gray-800">更新频率</strong> — 官方迭代节奏不算快，部分热门模板需等待适配。</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature Detail 功能详解 -->
-    <section id="features" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-sky-600 font-semibold text-sm tracking-widest uppercase">Features</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">91黑料hl每日大赛 核心功能详解</h2>
-                <p class="text-gray-500 mt-3 max-w-2xl mx-auto">我们亲自安装并深度体验了91黑料hl每日大赛的每一个模块，以下是最值得关注的亮点功能。</p>
-            </div>
+    <!-- ======= 功能详解 ======= -->
+    <section id="features" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">核心功能详解</h2>
+            <p class="text-center text-gray-500 text-sm mb-10">深入剖析 自动泛目录生成系统：批量建站与SEO优化的效率工具 的四大关键模块</p>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- 功能1 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-sky-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-mobile-screen"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">多端一致体验</h3>
-                    <p class="text-gray-600 leading-relaxed">模板响应式输出，PC与手机同源，尤其适合内链蜘蛛池为主的访问结构，减少维护两套前台的成本。</p>
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex-shrink-0 flex items-center justify-center"><i class="fa-solid fa-robot text-green-600 text-lg"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">智能蜘蛛模拟系统</h3>
+                        <p class="text-sm text-gray-600">内置 3 套蜘蛛UA库，可自定义模拟百度、360、搜狗等蜘蛛的抓取行为。配合 批量生成 自动生成高质量蜘蛛来访日志，显著提升目录收录率。</p>
+                    </div>
                 </div>
-                <!-- 功能2 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-sky-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-chart-column"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">运营数据看板</h3>
-                    <p class="text-gray-600 leading-relaxed">索引、更新与基础访问趋势可在后台查看，围绕whiteashley76.github.io生态做策略迭代更有依据。</p>
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex-shrink-0 flex items-center justify-center"><i class="fa-solid fa-window-restore text-green-600 text-lg"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">可视化模板编辑器</h3>
+                        <p class="text-sm text-gray-600">拖拽式搭建泛目录页面，支持页码、导航、面包屑等模块自定义位置。可实现与 SEO工具 完美搭配的指数级目录架构。</p>
+                    </div>
                 </div>
-                <!-- 功能3 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-sky-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-shield"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">基础安全防护</h3>
-                    <p class="text-gray-600 leading-relaxed">后台防爆破、关键操作校验与备份机制，降低91黑料hl每日大赛站点被篡改与数据丢失风险。</p>
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex-shrink-0 flex items-center justify-center"><i class="fa-solid fa-bolt text-green-600 text-lg"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">秒级目录生成引擎</h3>
+                        <p class="text-sm text-gray-600">基于多线程内存缓存技术，单次任务可生成 10 万+ 目录页。内置去重与关键词聚合算法，避免内容质量稀释。</p>
+                    </div>
                 </div>
-                <!-- 功能4 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition">
-                    <div class="w-14 h-14 rounded-xl bg-sky-600 text-white flex items-center justify-center text-2xl mb-5"><i class="fas fa-link"></i></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">内链自动编织</h3>
-                    <p class="text-gray-600 leading-relaxed">按关键词与栏目关系生成内链，提高蜘蛛爬行深度，对长尾落地页更友好。</p>
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex-shrink-0 flex items-center justify-center"><i class="fa-solid fa-chart-line text-green-600 text-lg"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">实时数据看板</h3>
+                        <p class="text-sm text-gray-600">收录曲线、抓取频次、目录层级分布一目了然。支持导出 CSV 报告，为企业站群运营提供数据支撑，配合 whiteashley76.github.io 域名管理更顺手。</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- System Requirements 系统要求 -->
-    <section id="requirements" class="py-16 bg-gray-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-sky-600 font-semibold text-sm tracking-widest uppercase">Requirements</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">系统环境要求</h2>
-                <p class="text-gray-500 mt-3">运行 91黑料hl每日大赛 需要满足以下基本服务器配置，推荐搭配 Nginx 使用以获得最佳性能。</p>
-            </div>
-            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
-                <table class="w-full text-sm sm:text-base">
-                    <thead>
-                        <tr class="bg-sky-600 text-white text-left">
-                            <th class="px-6 py-4 font-semibold">项目</th>
-                            <th class="px-6 py-4 font-semibold">最低配置</th>
-                            <th class="px-6 py-4 font-semibold">推荐配置</th>
+    <!-- ======= 系统要求 ======= -->
+    <section id="specs" class="py-12 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">系统要求</h2>
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                <table class="w-full text-sm">
+                    <thead class="bg-green-600 text-white">
+                        <tr>
+                            <th class="text-left px-5 py-3 font-semibold">环境/组件</th>
+                            <th class="text-left px-5 py-3 font-semibold">最低配置</th>
+                            <th class="text-left px-5 py-3 font-semibold">推荐配置</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fab fa-php text-sky-600 mr-2"></i>PHP 版本</td>
-                            <td class="px-6 py-4 text-gray-600">7.2+</td>
-                            <td class="px-6 py-4 text-gray-600">8.1+</td>
+                        <tr>
+                            <td class="px-5 py-3 text-gray-700 font-medium"><i class="fa-brands fa-php text-green-600 mr-2"></i>PHP 版本</td>
+                            <td class="px-5 py-3 text-gray-600">7.0+</td>
+                            <td class="px-5 py-3 text-gray-600">8.1+</td>
                         </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-database text-sky-600 mr-2"></i>数据库</td>
-                            <td class="px-6 py-4 text-gray-600">MySQL 5.6 / SQLite</td>
-                            <td class="px-6 py-4 text-gray-600">MySQL 8.0 + Redis</td>
+                        <tr class="bg-gray-50">
+                            <td class="px-5 py-3 text-gray-700 font-medium"><i class="fa-solid fa-database text-green-600 mr-2"></i>MYSQL 版本</td>
+                            <td class="px-5 py-3 text-gray-600">5.6</td>
+                            <td class="px-5 py-3 text-gray-600">8.0+</td>
                         </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-server text-sky-600 mr-2"></i>Web 服务器</td>
-                            <td class="px-6 py-4 text-gray-600">Apache / IIS</td>
-                            <td class="px-6 py-4 text-gray-600">Nginx 1.20+</td>
+                        <tr>
+                            <td class="px-5 py-3 text-gray-700 font-medium"><i class="fa-solid fa-server text-green-600 mr-2"></i>WEB 服务器</td>
+                            <td class="px-5 py-3 text-gray-600">Apache / Nginx</td>
+                            <td class="px-5 py-3 text-gray-600">Nginx 1.20+</td>
                         </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-memory text-sky-600 mr-2"></i>内存</td>
-                            <td class="px-6 py-4 text-gray-600">512 MB</td>
-                            <td class="px-6 py-4 text-gray-600">2 GB 及以上</td>
+                        <tr class="bg-gray-50">
+                            <td class="px-5 py-3 text-gray-700 font-medium"><i class="fa-solid fa-memory text-green-600 mr-2"></i>内存配置</td>
+                            <td class="px-5 py-3 text-gray-600">512 MB</td>
+                            <td class="px-5 py-3 text-gray-600">2 GB+</td>
                         </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium text-gray-800"><i class="fas fa-globe text-sky-600 mr-2"></i>浏览器支持</td>
-                            <td class="px-6 py-4 text-gray-600">Chrome / Edge</td>
-                            <td class="px-6 py-4 text-gray-600">Chrome / Edge / Safari</td>
+                        <tr>
+                            <td class="px-5 py-3 text-gray-700 font-medium"><i class="fa-solid fa-globe text-green-600 mr-2"></i>伪静态规则</td>
+                            <td class="px-5 py-3 text-gray-600" colspan="2">需开启 Rewrite / try_files</td>
                         </tr>
                     </tbody>
                 </table>
@@ -268,100 +222,74 @@
         </div>
     </section>
 
-    <!-- Download CTA 醒目下载区 -->
-    <section id="download" class="relative py-20 overflow-hidden bg-gradient-to-br from-sky-600 to-sky-700">
-        <div class="absolute inset-0 opacity-10">
-            <i class="fas fa-braille absolute top-10 left-10 text-7xl text-white"></i>
-            <i class="fas fa-cube absolute bottom-10 right-10 text-8xl text-white"></i>
-        </div>
-        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">立即下载 91黑料hl每日大赛</h2>
-            <p class="text-sky-100 text-lg mb-8">最新版本已通过全面测试，安装即可体验全部功能。免费升级，售后无忧。</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#" class="inline-flex items-center gap-3 bg-white hover:bg-gray-100 transition text-sky-700 font-bold text-lg px-8 py-4 rounded-2xl shadow-xl w-full sm:w-auto justify-center">
-                    <i class="fas fa-download text-2xl"></i> 查看版本
+    <!-- ======= 下载 CTA ======= -->
+    <section id="download" class="py-16 bg-gradient-to-br from-green-700 to-green-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <span class="inline-block bg-green-500/20 text-green-100 text-xs px-4 py-1.5 rounded-full mb-4"><i class="fa-solid fa-fire mr-1"></i>限时免费体验</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-3">核心功能实测：生成速度与稳定性</h2>
+            <p class="text-green-100/90 max-w-2xl mx-auto mb-8">立即获取最新版安装包，覆盖 批量生成 全场景部署指南，还有专属客服协助安装配置。</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-white text-green-700 hover:bg-green-50 px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition inline-flex items-center">
+                    <i class="fa-solid fa-download mr-2"></i>查看版本
                 </a>
-                <a href="#" class="inline-flex items-center gap-3 border-2 border-white/60 hover:border-white hover:bg-white/10 transition text-white font-semibold px-8 py-4 rounded-2xl w-full sm:w-auto justify-center backdrop-blur-sm">
-                    <i class="fas fa-circle-question text-xl"></i> 智能栏目规则帮助文档
+                <a href="#" class="bg-green-500/20 text-white hover:bg-green-500/30 px-8 py-4 rounded-xl font-semibold text-lg transition inline-flex items-center border border-green-400/30">
+                    <i class="fa-brands fa-windows mr-2"></i>Windows 版
+                </a>
+                <a href="#" class="bg-green-500/20 text-white hover:bg-green-500/30 px-8 py-4 rounded-xl font-semibold text-lg transition inline-flex items-center border border-green-400/30">
+                    <i class="fa-brands fa-linux mr-2"></i>Linux 版
                 </a>
             </div>
-            <p class="mt-6 text-sky-200 text-sm"><i class="fas fa-shield-halved mr-1"></i> 本站文件均经过 MD5 校验，放心下载</p>
+            <p class="text-green-200/60 text-xs mt-6"><i class="fa-solid fa-shield-halved mr-1"></i>本站所有资源均为官方原版，无篡改，无后门</p>
         </div>
     </section>
 
-    <!-- FAQ 常见问题 -->
-    <section id="faq" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-sky-600 font-semibold text-sm tracking-widest uppercase">FAQ</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">关于 91黑料hl每日大赛 的常见问题</h2>
-            </div>
+    <!-- ======= FAQ ======= -->
+    <section id="faq" class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">常见问题 FAQ</h2>
+            <p class="text-center text-gray-500 text-sm mb-10">关于 自动泛目录生成系统：批量建站与SEO优化的效率工具 你可能想问的</p>
             <div class="space-y-4">
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-sky-600 mr-2"></i>如何做智能栏目规则相关配置？</span>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">先确定栏目层级与URL规则，再导入词库并设置生成节奏。建议先小范围试跑，确认抓取正常后再放量。</p>
+                <details class="group bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-800 group-open:text-green-600"><span><i class="fa-solid fa-circle-question text-green-600 mr-2"></i>自动泛目录生成系统：批量建站与SEO优化的效率工具 支持哪些 PHP 版本？</span><i class="fa-solid fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed pl-7">官方建议 PHP 8.0 以上运行，最低支持 7.0。建议开启 OpCache 以获得最佳性能，完美兼容 批量生成 常见环境组合。</p>
                 </details>
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-sky-600 mr-2"></i>内链蜘蛛池场景怎么迁移数据？</span>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">导出SQL与附件后，在新机恢复并修改连接配置即可。迁移后优先检查伪静态与权限，避免图片与分页失效。</p>
+                <details class="group bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-800 group-open:text-green-600"><span><i class="fa-solid fa-circle-question text-green-600 mr-2"></i>泛目录生成的页面会被搜索引擎判定为垃圾吗？</span><i class="fa-solid fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed pl-7">合理设置目录层级、内容差异化以及控制生成频率，配合内置蜘蛛池策略，可大幅降低判定风险。建议不要过度堆砌，结合 SEO工具 内容生态更安全。</p>
                 </details>
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-sky-600 mr-2"></i>百度收录慢怎么办？</span>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">检查Sitemap、内链与页面打开速度，避免重复标题。稳定更新比一次性海量生成更有效，可结合站长平台观察抓取。</p>
+                <details class="group bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-800 group-open:text-green-600"><span><i class="fa-solid fa-circle-question text-green-600 mr-2"></i>在哪里下载最新版本？</span><i class="fa-solid fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed pl-7">点击页面中的「查看版本」按钮即可获取最新版下载链接。本站还提供历史版本存档，可前往 whiteashley76.github.io 官网查询更多信息。</p>
                 </details>
-                <details class="group bg-gray-50 rounded-xl border border-gray-200 p-5 open:shadow-md transition">
-                    <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-gray-900">
-                        <span><i class="fas fa-question-circle text-sky-600 mr-2"></i>版本更新是否免费？</summary>
-                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">91黑料hl每日大赛的正式版授权用户可以免费获取所有小版本升级，每次升级都包含性能优化与安全修复，建议保持后台自动更新开启。</p>
+                <details class="group bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-800 group-open:text-green-600"><span><i class="fa-solid fa-circle-question text-green-600 mr-2"></i>是否有技术支持？</span><i class="fa-solid fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed pl-7">购买正版授权后享受永久在线客服 QQ/工单服务，同时社区论坛提供大量免费教程（覆盖 批量生成 等方向）。</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- Footer 网站底部 -->
-    <footer class="bg-gray-900 text-gray-400 pt-14 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-10">
-                <div class="col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-sky-500 text-2xl"><i class="fas fa-cubes"></i></span>
-                        <span class="font-bold text-white text-lg">91黑料hl每日大赛</span>
-                    </div>
-                    <p class="text-sm leading-relaxed">91黑料hl每日大赛强调「可运营」：从栏目规则、内容归类到数据监控一体打通，减少重复劳动，让更新频率和收录质量同步提升。。本站致力于提供最专业、最客观的91黑料hl每日大赛评测与下载服务。</p>
+    <!-- ======= Footer ======= -->
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center space-x-2">
+                    <span class="w-7 h-7 bg-green-500 rounded-lg flex items-center justify-center"><i class="fa-solid fa-layer-group text-white text-xs"></i></span>
+                    <span class="text-white font-semibold">自动泛目录生成系统：批量建站与SEO优化的效率工具</span>
+                    <span class="text-xs text-gray-500">— 软件评测站 · 仅提供技术交流</span>
                 </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">快速导航</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#review" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>评测总览</a></li>
-                        <li><a href="#pros-cons" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>优缺点对比</a></li>
-                        <li><a href="#features" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>功能详解</a></li>
-                        <li><a href="#download" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>下载入口</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">相关资源</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>whiteashley76.github.io官方文档</a></li>
-                        <li><a href="#" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>智能栏目规则模板中心</a></li>
-                        <li><a href="#" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>内链蜘蛛池插件库</a></li>
-                        <li><a href="#faq" class="hover:text-sky-400 transition"><i class="fas fa-angle-right mr-2"></i>帮助中心</a></li>
-                    </ul>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-green-400 transition"><i class="fa-solid fa-circle-info mr-1"></i>关于我们</a>
+                    <a href="#" class="hover:text-green-400 transition"><i class="fa-solid fa-envelope mr-1"></i>联系我们</a>
+                    <a href="#" class="hover:text-green-400 transition"><i class="fa-solid fa-file-lines mr-1"></i>免责声明</a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-                <p>© 2026 91黑料hl每日大赛 评测页模板 · 本站为独立评测网站，不隶属于任何机构</p>
-                <p><i class="fas fa-heart text-sky-600 mr-1"></i> 用心评测，为站长服务</p>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-xs text-center text-gray-500">
+                <p>© 2023 whiteashley76.github.io 版权所有 · 自动泛目录生成系统：批量建站与SEO优化的效率工具评测页模板 · 请合理使用软件，勿用于违规场景</p>
+                <p class="mt-1">
+                    <i class="fa-brands fa-html5 mx-1"></i><i class="fa-brands fa-css3-alt mx-1"></i><i class="fa-brands fa-js mx-1"></i>
+                    Built with Tailwind CSS & FontAwesome
+                </p>
             </div>
         </div>
     </footer>
